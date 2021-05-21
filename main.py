@@ -13,3 +13,7 @@ plt.hist([dog_height, cat_height], label=['Dogs', 'Cats'], stacked=True, color=[
 
 plt.legend()
 plt.show()
+#히스토그램사용
+#30이하의 동물이 고양이가 더 많고 40이상은 강아지가 더 많다.
+#특징을 가지고 구분 (키)
+#
