@@ -1,6 +1,7 @@
 from sklearn.datasets import load_iris
 from sklearn import tree
 import numpy as np
+import graphviz
 
 iris = load_iris()          #iris 토이 데이터 세트를 iris변수에 저장
 test = [0, 50, 100]
@@ -28,5 +29,17 @@ test_target = iris.target[test]
 clf = tree.DecisionTreeClassifier()
 clf.fit(train_data, train_target)
 
-print(test_target)
-print(clf.predict(test_data))
+'''print(test_target)
+print(clf.predict(test_data))'''
+
+# 아이리스 데이터 세트로 생성된 결정트리
+dot_data = tree.export_graphviz(clf, out_file = None)
+graph = graphviz.Source(dot_data)
+graph.render("iris")
+dot_data = tree.export_graphviz(clf, out_file = None,
+                                feature_names = iris.feature_names,
+                                class_names = iris.target_names,
+                                filled = True, rounded = True,
+                                special_characters = True)
+graph = graphviz.Source(dot_data)
+graph
