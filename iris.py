@@ -43,3 +43,6 @@ dot_data = tree.export_graphviz(clf, out_file = None,
                                 special_characters = True)
 graph = graphviz.Source(dot_data)
 graph
+
+print(test_data[1], test_target[1])
+print(iris.feature_names, iris.target_names)
