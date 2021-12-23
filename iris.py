@@ -1,5 +1,8 @@
 from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn import tree
+from sklearn import datasets
 import numpy as np
 import graphviz
 
@@ -46,3 +49,13 @@ graph
 
 print(test_data[1], test_target[1])
 print(iris.feature_names, iris.target_names)
+
+iris1 = datasets.load_iris()
+x = iris1.data
+y = iris1.target
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=.5)
+clf1 = KNeighborsClassifier()
+clf1.fit(x_train, y_train)
+predictions = clf1.predict(x_test)
+print('예측:\n', predictions)
+print('정답:\n', y_test)

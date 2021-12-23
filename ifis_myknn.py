@@ -13,7 +13,7 @@ class myKNN():
             label = random.choice(self.y_train)
             predictions.append(label)
         return predictions
-# 훈련데이터
+
 
 iris = datasets.load_iris()
 x = iris.data

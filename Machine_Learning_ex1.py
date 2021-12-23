@@ -1,5 +1,6 @@
 from sklearn import tree
 
+
 features = [[270, 0], [250, 0], [220, 1], [240, 1]]
 labels = [0, 0, 1, 1]
 #입력 특징일 2차원 리스트로 features 변수에 저장
