@@ -1,4 +1,4 @@
-# knn
+
 x = [[0], [1], [2], [3], [4], [5]]
 y = [0, 0, 0, 1, 1, 1]
 from sklearn.neighbors import KNeighborsClassifier
